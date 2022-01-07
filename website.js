@@ -2,13 +2,13 @@ var json = {
   doItems: [
     {
       title: "Pride @ Kristin School",
-      link: "01-09-2022",
+      link: "01-09-2022.html",
       img: "https://i.imgur.com/sjGLX5b.png",
       color: "purple-300"
     },
     {
       title: "Campus-wide Composting",
-      link: "01-08-2022",
+      link: "01-08-2022.html",
       img: "https://i.imgur.com/jFKEGen.png",
       color: "green-200"
     },
@@ -51,7 +51,12 @@ for (var i = 0; i < doItems.length; i++) {
     "pt-1",
     "font-serif"
   );
-  p.innerHTML = doItems[i].title + " >";
+  p.innerHTML =
+    "<a href='/things/done/" +
+    doItems[i].link +
+    "'>" +
+    doItems[i].title +
+    " > </a>";
   img.setAttribute("src", doItems[i].img);
   div.appendChild(img);
   div.appendChild(p);
