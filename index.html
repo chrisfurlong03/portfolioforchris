@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>cₕᵣᵢₛ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            display: ["Calistoga", "cursive"],
+            serif: ["Trocchi", "serif"]
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      class="container max-w-[90%] md:max-w-none ml-6 md:ml-40 xl:ml-60 mt-20"
+    >
+      <!--  The main container -->
+      <h1 class="font-display text-3xl font-bold">
+        Chris Furlong
+      </h1>
+      <div class="flex flex-wrap">
+        <!-- The main menu -->
+        <div
+          class="underline underline-offset-4 hover:bg-black hover:text-white mb-3"
+        >
+          <a href="/">PORTFOLIO</a>
+        </div>
+        <div
+          class="underline underline-offset-4 hover:bg-black hover:text-white ml-8 mr-8 mb-3"
+        >
+          <a href="/contact.html">CONTACT</a>
+        </div>
+        <div
+          class="underline underline-offset-4 hover:bg-black hover:text-white mr-8 mb-3"
+        >
+          <a href="/aboutsite.html">SITE INFO</a>
+        </div>
+      </div>
+      <div class="container mt-8 italic">
+        <!--Main Container-->
+        <div id="thingsDone" class="container">
+          <h2 class="font-display text-2xl">things i've done:</h2>
+          <div class="do-blog flex flex-wrap"></div>
+        </div>
+        <div id="thingsLove" class="container"></div>
+      </div>
+      <div class="container">
+        <!--Footer-->
+        <div class="flex flex-wrap">
+          <div class="text-gray-400 hover:text-black pt-3">
+            <a href="aboutsite.html">☞ how this portfolio was built.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="website.js"></script>
+</html>
