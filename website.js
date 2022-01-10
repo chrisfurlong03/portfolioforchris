@@ -87,4 +87,42 @@ btn.innerHTML =
   "<a class='not-italic px-8 py-3 text-gray-700 w-full flex items-center justify-center hover:italic' href='#' onclick='loadMore'>Load More</a>";
 doPosts.appendChild(btn);
 
-function loadMore() {}
+function loadMore() {
+  for (var i = 3; i < doItems.length; i++) {
+    var div = document.createElement("div");
+    div.classList.add(
+      "bg-" + doItems[i].color,
+      "w-64",
+      "h-24",
+      "ml-2",
+      "mt-2",
+      "flex"
+    );
+    doPosts.appendChild(div);
+    var img = document.createElement("img");
+    img.classList.add("w-24", "h-24", "object-cover");
+    var p = document.createElement("div");
+    p.classList.add(
+      "not-italic",
+      "px-1",
+      "text-base",
+      "w-40",
+      "hover:italic",
+      "hover:underline",
+      "inline-block",
+      "justify-end",
+      "pl-3",
+      "pt-1",
+      "font-serif"
+    );
+    p.innerHTML =
+      "<a href='/things/done/" +
+      doItems[i].link +
+      "'>" +
+      doItems[i].title +
+      " > </a>";
+    img.setAttribute("src", doItems[i].img);
+    div.appendChild(img);
+    div.appendChild(p);
+  }
+}
