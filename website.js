@@ -84,10 +84,11 @@ btn.classList.add(
 );
 
 btn.innerHTML =
-  "<a class='not-italic px-8 py-3 text-gray-700 w-full flex items-center justify-center hover:italic' href='#' onclick='loadMore'>Load More</a>";
+  "<a class='not-italic px-8 py-3 text-gray-700 w-full flex items-center justify-center hover:italic' href='#' onclick='loadMore()'>Load More</a>";
 doPosts.appendChild(btn);
 
 function loadMore() {
+  btn.remove();
   for (var i = 3; i < doItems.length; i++) {
     var div = document.createElement("div");
     div.classList.add(
