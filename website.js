@@ -13,16 +13,16 @@ var json = {
       color: "green-200"
     },
     {
-      title: "Tsunami Research Project / My IB EE",
-      link: "01-11-2022.html",
-      img: "https://i.imgur.com/ODNj3Bn.jpg",
-      color: "blue-200"
-    },
-    {
       title: "StudentForward, Inter-School Connection",
       link: "01-07-2022.html",
       img: "https://i.imgur.com/L8s3VFt.jpg",
       color: "sky-200"
+    },
+    {
+      title: "Tsunami Research Project / My IB EE",
+      link: "01-11-2022.html",
+      img: "https://i.imgur.com/2rkt8Bn.jpg",
+      color: "blue-200"
     },
     {
       title: "Kristin School Sustainability Website",
