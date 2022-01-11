@@ -64,12 +64,7 @@ for (var i = 0; i < 3; i++) {
     "pt-1",
     "font-serif"
   );
-  p.innerHTML =
-    "<a href='/things/done/" +
-    doItems[i].link +
-    "'>" +
-    doItems[i].title +
-    " > </a>";
+  p.innerHTML = `<a onclick="document.getElementById('img${i}').style.display='inline'" href='/things/done/${doItems[i].link}'>${doItems[i].title} ></a> <img id='img${i}' class='w-[35px] hidden' src='https://i.imgur.com/ztoT0Sf.gif'></img>`;
   img.setAttribute("src", doItems[i].img);
   div.appendChild(img);
   div.appendChild(p);
@@ -116,12 +111,7 @@ function loadMore() {
       "pt-1",
       "font-serif"
     );
-    p.innerHTML =
-      "<a href='/things/done/" +
-      doItems[i].link +
-      "'>" +
-      doItems[i].title +
-      " > </a>";
+    p.innerHTML = `<a onclick="document.getElementById('img${i}').style.display='inline'" href='/things/done/${doItems[i].link}'>${doItems[i].title}</a> <img id='img${i}' class='w-[30px] hidden' src='https://i.imgur.com/ztoT0Sf.gif' onclick="this.style.visibility='visible';"> </img>`;
     img.setAttribute("src", doItems[i].img);
     div.appendChild(img);
     div.appendChild(p);
