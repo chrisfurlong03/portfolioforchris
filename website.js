@@ -2,31 +2,32 @@ var json = {
   doItems: [
     {
       title: "Pride @ Kristin School",
-      link: "01-09-2022.html",
+      link: "/things/done/01-09-2022.html",
       img: "https://i.imgur.com/sjGLX5b.png",
       color: "purple-300"
     },
     {
       title: "Campus-wide Composting",
-      link: "01-08-2022.html",
+      link: "/things/done/01-08-2022.html",
       img: "https://i.imgur.com/jFKEGen.png",
       color: "green-200"
     },
     {
       title: "StudentForward, Inter-School Connection",
-      link: "01-07-2022.html",
+      link: "/things/done/01-07-2022.html",
       img: "https://i.imgur.com/L8s3VFt.jpg",
       color: "sky-200"
     },
     {
       title: "Tsunami Research Project / My IB EE",
-      link: "01-11-2022.html",
+      link:
+        "https://docs.google.com/document/u/1/d/e/2PACX-1vR5uNeS-f968KCeJ7kxjDhZ-IpYNilVJj_s3dY_Fbs5ZxoUS6N-XdUOgYUhLSNvs2rIXSBCzWT3Qb8D/pub",
       img: "https://i.imgur.com/2rkt8Bn.jpg",
       color: "blue-200"
     },
     {
       title: "Kristin School Sustainability Website",
-      link: "01-12-2022.html",
+      link: "https://kristinsustainability.school.nz",
       img: "https://i.imgur.com/yFADY7t.png",
       color: "teal-100"
     }
@@ -64,7 +65,7 @@ for (var i = 0; i < 3; i++) {
     "pt-1",
     "font-serif"
   );
-  p.innerHTML = `<a onclick="document.getElementById('img${i}').style.display='inline'" href='/things/done/${doItems[i].link}'>${doItems[i].title} ></a> <img id='img${i}' class='w-[35px] hidden' src='https://i.imgur.com/ztoT0Sf.gif'></img>`;
+  p.innerHTML = `<a onclick="document.getElementById('img${i}').style.display='inline'" href='${doItems[i].link}'>${doItems[i].title} ></a> <img id='img${i}' class='w-[35px] hidden' src='https://i.imgur.com/ztoT0Sf.gif'></img>`;
   img.setAttribute("src", doItems[i].img);
   div.appendChild(img);
   div.appendChild(p);
@@ -111,7 +112,7 @@ function loadMore() {
       "pt-1",
       "font-serif"
     );
-    p.innerHTML = `<a onclick="document.getElementById('img${i}').style.display='inline'" href='/things/done/${doItems[i].link}'>${doItems[i].title}</a> <img id='img${i}' class='w-[30px] hidden' src='https://i.imgur.com/ztoT0Sf.gif' onclick="this.style.visibility='visible';"> </img>`;
+    p.innerHTML = `<a onclick="document.getElementById('img${i}').style.display='inline'" href='${doItems[i].link}' target="_blank">${doItems[i].title}</a> <img id='img${i}' class='w-[30px] hidden' src='https://i.imgur.com/ztoT0Sf.gif' onclick="this.style.visibility='visible';"> </img>`;
     img.setAttribute("src", doItems[i].img);
     div.appendChild(img);
     div.appendChild(p);
