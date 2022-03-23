@@ -1,1 +1,112 @@
-hey Compost
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>cₕᵣᵢₛ</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            display: ["Calistoga", "cursive"],
+            serif: ["Trocchi", "serif"]
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container max-w-[85%] md:max-w-[70%] ml-6 md:ml-40 xl:ml-60 mt-20">
+      <!--  The head container -->
+      <h1 class="font-display text-3xl font-bold">
+        Chris Furlong
+      </h1>
+      <div class="flex flex-wrap">
+        <!-- The main menu -->
+        <div
+          class="underline underline-offset-4 hover:bg-black hover:text-white mb-3"
+        >
+          <a href="/">PORTFOLIO</a>
+        </div>
+        <div
+          class="underline underline-offset-4 hover:bg-black hover:text-white ml-8 mr-8 mb-3"
+        >
+          <a href="/contact.html">CONTACT</a>
+        </div>
+        <div
+          class="underline underline-offset-4 hover:bg-black hover:text-white mr-8 mb-3"
+        >
+          <a href="/aboutsite.html">SITE INFO</a>
+        </div>
+      </div>
+      <div class="grid-cols-1 mt-8 md:max-w-xl xl:max-w-2xl">
+        <!--Main Container-->
+        <h2 id="headLine" class="font-display text-4xl">
+          Campus-wide Composting
+        </h2>
+        <p id="subTitle" class="font-serif text-gray-600 mt-2 italic">
+          During my two years leading the Waste Team, I focussed on creating a solution to Kristin's landfill waste addiction.
+        </p>
+
+        <div class="mt-8 relative inline-block after:content-[''] after:absolute after:left-12 after:top-32 md:after:left-20 md:after:top-24 after:border-2 after:border-solid after:border-purple-200 after:w-[80%] after:h-full after:-z-10 after:bg-purple-200">
+          <img class="align-bottom md:ml-8 w-[80%]" src="https://i.imgur.com/mnx2YmV.png"></img> 
+        </div>
+        <p class="italic h-32 md:h-24 pl-14 md:pl-24 max-w-[85%] md:max-w-[85%]">Sets was my partner in crime. They pushed this project forward and did the hard work when it was needed.</p>
+        
+        <p class="mt-5">Over the summer, we put our ideas down on paper. We created a Pride vision for Kristin, we laid out our reasoning, and devised a brief action plan. We took this plan to an iconic teacher, and out school's principal. The teacher supported us and gave us connections, and the principle feedback and approval. After months of planning, and back and forth with various school staff, we launched Kristin
+          Pride. 
+        </p>
+        <br>
+        <p>
+          What we accomplished: <br> <br>
+          <ul class="list-disc">
+              <li>We held a senior school assembly where a recent alum talked to students and teachers about
+                the need for safe LGBTQ+ spaces at Kristin. 
+              </li>
+              <li>We held a movie night for the LGBTQ+ community and allies, to engage them with our work.</li>
+              <li>We ran a teacher workshop with a presentation and Q&A, which lead to productive discussion around athletics, younger
+                LGBT kids, and dealing with parents. We also built support for safe LGBT spaces.
+              </li>
+              <li>
+                We fundraised at the Summer Carnival and Service Market, selling positve merchandise like pronoun
+                pins.
+              </li>
+              <li>We ran another assembly, but focussed on HIV/AIDS. We launched our Red Ribbon campaign
+                to fundraise for UNAIDS. We sold over 100 ribbons and raised over NZ$400.
+              </li>
+              <li>During lockdown 2021, we compiled a 10-page teacher handbook about the Kristin LGBTQ+ community. It included answers to questions they submitted. As well as personal student experiences, and a collection of resources. 
+                This helped convey the hopes and aspirations of LGBTQ+ students.
+              </li>
+              <li>We passed on the role in the Kristin Pride group to a new set of students. We've also created a wave of external support for LGBTQ-safe policies that is helping to turn the tide against
+                the residual homophobia/transphobia in the corners of our community.
+              </li>
+              <!-- ... -->
+            </ul>
+            
+        </p>
+      </div>
+      <div class="container">
+        <!--Footer-->
+        <div class="flex flex-wrap">
+          <div class="text-gray-400 hover:text-black pt-3">
+            <a href="aboutsite.html">☞ how this portfolio was built.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="website.js"></script>
+</html>
