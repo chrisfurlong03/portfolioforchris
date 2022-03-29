@@ -30,7 +30,7 @@
   </head>
   <body>
     <div
-      class="container max-w-[90%] md:max-w-[70%] ml-6 md:ml-40 xl:ml-60 mt-20"
+      class="container max-w-[85%] md:max-w-[70%] ml-6 md:ml-40 xl:ml-60 mt-20"
     >
       <!--  The main container -->
       <h1 class="font-display text-3xl font-bold">
@@ -54,13 +54,85 @@
           <a href="/aboutsite.html">SITE INFO</a>
         </div>
       </div>
-      <div class="container mt-8">
+      <div class="grid-cols-1 mt-8 md:max-w-xl xl:max-w-2xl">
         <!--Main Container-->
 
         <h2 class="font-display text-2xl italic">
           Portfolio Behind the Scenes:
         </h2>
-        <p class="text-gray-500 mt-1">coming soon.</p>
+        <p>
+          This site is hosted on Github Pages. You can go straight to the github
+          repository
+          <a
+            class="underline underline-offset-2 text-blue-600"
+            href="https://github.com/chrisfurlong03/portfolioforchris"
+            >here</a
+          >.
+        </p>
+        <p class="mt-2">
+          The rest of this page walks through the methods involved in creating
+          this portfolio.
+        </p>
+        <h3 class="font-display text-xl mt-3">
+          How this site functions:
+        </h3>
+        <p class="mt-1">
+          This site is made up of static pages of content, with a dynamic
+          homepage that displays links to the content in an organized way. It
+          populates with links to the static pages on this site. In this way,
+          the homepage is like a map that organizes the content on this site in
+          a user-friendly way. The static pages that the homepage link to are
+          the content pages, and they are organized in the following file
+          structure.
+        </p>
+        <div class="mt-3 mb-3" id="fileStrut_Guide"></div>
+        <p>
+          The homepage gets the images and link title from the JSON/Script file.
+          The Script acts as a very simplistic content management system (CMS).
+          The homepage is considered "dynamic" because everytime the JSON is
+          updated (eg a new page is added), the homepage will reflect this
+          change. Right now I create each page (the things in the "things"
+          folder) and update the JSON with the page's details. These details
+          include: the link, the colour, and the thumbnail (all of these
+          properties combined create the link you see on the homepage). In the
+          future I may add a way to edit the content without having to edit the
+          code directly.
+        </p>
+        <h3 class="font-display text-xl mt-3">
+          Tools used to build/manage this site:
+        </h3>
+        <p class="mt-1">
+          <a
+            class="underline underline-offset-2 text-blue-600"
+            href="https://github.com/chrisfurlong03/portfolioforchris"
+            >Github</a
+          >
+          hosts this site;
+          <a
+            class="underline underline-offset-2 text-blue-600"
+            href="https://codesandbox.io/"
+            >CodeSandbox.io</a
+          >
+          is the dev environment;
+          <a
+            class="underline underline-offset-2 text-blue-600"
+            href="https://tailwindcss.com/"
+            >TailWind CSS</a
+          >
+          is used to make the site look pretty;
+          <a
+            class="underline underline-offset-2 text-blue-600"
+            href="https://imgur.com/"
+            >Imgur</a
+          >
+          hosts the images; And
+          <a
+            class="underline underline-offset-2 text-blue-600"
+            href="https://dmitrybaranovskiy.github.io/raphael/"
+            >Raphael JS</a
+          >
+          is used to make graphics (like the site structure one shown above)
+        </p>
       </div>
       <div class="container">
         <!--Footer-->
@@ -68,4 +140,41 @@
     </div>
   </body>
   <script src="website.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script>
+    paper = Raphael("fileStrut_Guide", 300, 200);
+
+    var t = paper
+      .text(65, 10, "📁 portfolioforchris/")
+      .attr({ "font-size": 15 });
+    var l = paper.path("M10 25L150 25").attr({ "stroke-dasharray": ". " });
+    var t1 = paper.text(70, 45, "📄 index.html").attr({ "font-size": 15 });
+    var ar = paper.path("M135 45L120 45").attr({
+      stroke: "red",
+      "stroke-width": 2,
+      "arrow-end": "classic-wide-long"
+    });
+    var st = paper
+      .text(175, 45, "homepage")
+      .attr({ fill: "red" })
+      .attr({ "font-size": 15 });
+    var t2 = paper.text(70, 70, "📜 website.js").attr({ "font-size": 15 });
+    var ar = paper.path("M135 70L120 70").attr({
+      stroke: "red",
+      "stroke-width": 2,
+      "arrow-end": "classic-wide-long"
+    });
+    var st = paper
+      .text(190, 70, "JSON/Script file")
+      .attr({ fill: "red" })
+      .attr({ "font-size": 15 });
+    var t3 = paper.text(59, 95, "📁 things/").attr({ "font-size": 15 });
+    var l1 = paper.path("M35 110L185 110").attr({ "stroke-dasharray": ". " });
+    var t4 = paper
+      .text(115, 130, "📄 01-07-2022.html")
+      .attr({ "font-size": 15 });
+    var t5 = paper
+      .text(115, 155, "📄 01-09-2022.html")
+      .attr({ "font-size": 15 });
+  </script>
 </html>
